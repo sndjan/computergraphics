@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Exercise 01 - Transformations</title>
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="../github-markdown.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
+
+    <body class="transformations">
+        <h2>Exercise 01 - Transformations</h2>
+        
+        <div class="container">
+            <div class="canvas-section">
+                <canvas id="canvas" width="600" height="400" style="border-radius: 10px;"></canvas>
+            </div>
+            
+            <div class="text-section">
+                <div id="text-content" class="text-content markdown-body" style=" font-size: 15px; width: 600px; height: 323px; overflow-y: scroll; overflow-x: hidden; padding: 40px; border-radius: 10px; word-wrap: break-word;">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            fetch('transformations_thoughts.md')
+                .then(response => response.text())
+                .then(markdownContent => {
+                    document.getElementById('text-content').innerHTML = marked.parse(markdownContent);
+                })
+                .catch(error => console.error('Error loading markdown:', error));
+        </script>
+        <script src="transformations.js"></script>
+    </body>
+</html>
