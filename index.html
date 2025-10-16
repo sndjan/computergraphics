@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Computer Graphics - Exercises</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+
+            .container {
+                min-height: 100vh;
+            }
+
+            .header {
+                background: #333;
+                color: white;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .tabs {
+                display: flex;
+                background: #ddd;
+                border-bottom: 2px solid #333;
+            }
+
+            .tab {
+                flex: 1;
+                padding: 15px;
+                background: #ddd;
+                border: none;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background-color 0.3s;
+            }
+
+            .tab:hover {
+                background: #bbb;
+            }
+
+            .tab.active {
+                background: #333;
+                color: white;
+            }
+
+            .content {
+                height: calc(100vh - 140px);
+                overflow: hidden;
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>Computer Graphics - Exercises</h1>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab active" onclick="showTab('exercise01')">Exercise 01</button>
+                <button class="tab" onclick="showTab('exercise02')">Exercise 02</button>
+                <!-- <button class="tab" onclick="showTab('exercise03')">Exercise 03</button> -->
+            </div>
+            
+            <div class="content">
+                <iframe id="contentFrame" src="exercise01.html"></iframe>
+            </div>
+        </div>
+
+        <script>
+            function showTab(exerciseId) {
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                event.target.classList.add('active');
+                document.getElementById('contentFrame').src = exerciseId + '.html';
+            }
+        </script>
+    </body>
+</html>
