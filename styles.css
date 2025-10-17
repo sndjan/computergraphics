@@ -62,7 +62,6 @@ body.transformations {
 }
 
 .transformations h2 {
-    color: white;
     margin-top: 0;
     text-align: center;
 }
@@ -73,9 +72,6 @@ body.transformations {
     margin: 0 auto;
     align-items: flex-start;
     justify-content: center;
-}
-
-.canvas-section {
 }
 
 canvas {    
