@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Computer Graphics</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <h1>Computer Graphics</h1>
-            </div>
-            
-            <div class="tabs">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Computer Graphics</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Computer Graphics</h1>
+      </div>
 
-                <button class="tab active" onclick="showTab('/intro')">Intro</button>
-                <button class="tab" onclick="showTab('/lecture01/transformations')">Lecture 01</button>
-                <button class="tab" onclick="showTab('/exercise01/transformations')">Exercise 01</button>
-                <!-- <button class="tab" onclick="showTab('exercise02')">Exercise 02</button> -->
-                <!-- <button class="tab" onclick="showTab('exercise03')">Exercise 03</button> -->
-            </div>
-            
-            <div class="content">
-                <iframe id="contentFrame" src="intro.html"></iframe>
-            </div>
-        </div>
+      <div class="tabs">
+        <button class="tab active" onclick="showTab('/intro')">Intro</button>
+        <!-- <button class="tab" onclick="showTab('/lecture01/transformations')">Lecture 01</button> -->
+        <button class="tab" onclick="showTab('/exercise01/transformations')">
+          Exercise 01
+        </button>
+        <!-- <button class="tab" onclick="showTab('exercise02')">Exercise 02</button> -->
+        <!-- <button class="tab" onclick="showTab('exercise03')">Exercise 03</button> -->
+      </div>
 
-        <script>
-            function showTab(exerciseId) {
-                const tabs = document.querySelectorAll('.tab');
-                tabs.forEach(tab => tab.classList.remove('active'));
-                event.target.classList.add('active');
-                document.getElementById('contentFrame').src = exerciseId + '.html';
-            }
-        </script>
-    </body>
+      <div class="content">
+        <iframe id="contentFrame" src="intro.html"></iframe>
+      </div>
+    </div>
+
+    <script>
+      function showTab(exerciseId) {
+        const tabs = document.querySelectorAll(".tab");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+        event.target.classList.add("active");
+        document.getElementById("contentFrame").src = exerciseId + ".html";
+      }
+    </script>
+  </body>
 </html>
