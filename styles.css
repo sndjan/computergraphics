@@ -6,13 +6,13 @@
 }
 
 .container {
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 .header {
     background: #333;
     color: white;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
 }
 
@@ -52,8 +52,8 @@ iframe {
     border: none;
 }
 
-/* Transformations page styles */
-body.transformations {
+/* exercise page styles */
+body.exercise {
     font-family: sans-serif;
     background-color: black;
     margin: 0;
@@ -61,12 +61,12 @@ body.transformations {
     color: white;
 }
 
-.transformations h2 {
+.exercise h2 {
     margin-top: 0;
     text-align: center;
 }
 
-.transformations .container {
+.exercise .container {
     display: flex;
     gap: 20px;
     margin: 0 auto;
